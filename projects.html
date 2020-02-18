@@ -4,16 +4,94 @@
 <head>
 <style>
     body{
-        background-color: blue;
+        background-color: black;
     }
+    div.ex1 {
+    width:500px;
+  margin: auto;
+  border: 3px solid #73AD21;
+}
 </style>    
 <title>Mohamed's Projects</title>
+<div class="Navigation">
+    <button onclick="myFunction()" class="dropbtn">Navigation</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="index.html"><font color="white">Home</font></a>
+      <a href="https://github.com/mohgram"><font color="white"</a>
+    </div>
+</div>
+<style>
+    .dropbtn {
+      background-color: gold;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .dropbtn:hover, .dropbtn:focus {
+      background-color: blue;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: black;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown a:hover {background-color: #ddd;}
+    
+    .show {display: block;}
+    </style>
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
 </head>
 <h1><font color="white" size="5"><font color="white">Projects</font></h1>
+<div class="ex1">These are all my projects, coded completely by me(With help from Google/Discord)</div>
 <a href="https://github.com/mohgram/sobble"><font color="white" size="5">My First Discord Bot</font></a>
+<br>
 <a href="https://github.com/mohgram/discordwaffles"><font color="white" size="5">My Second Discord Bot</font></a>
+<br>
 <a href="https://github.com/mohgram/javacalculator"><font color="white" size="5">Java Calculator</font></a>
+<br>
 <a href="https://github.com/mohgram/Sitem"><font color="white" size="5">Python Flight Booking</font></a>
+<br>
 <a href="https://github.com/mohgram/clearspheres"><font color="white" size="5">C++ Bank Account System</font></a>
 </body>
 </html>
